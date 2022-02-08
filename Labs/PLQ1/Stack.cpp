@@ -60,7 +60,6 @@ int Stack::removeMax() {
         }
     } 
 
-    arr[elementCount-1] = -1;
     elementCount--;
 
     return maxElement;
