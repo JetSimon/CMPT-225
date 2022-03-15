@@ -27,7 +27,7 @@ if rt != 0:
 
 # Run test
 sys.stdout.write("Running test ... ");
-rt = subprocess.call("timeout 2s ./x > 1.out",shell=True)
+rt = subprocess.call("gtimeout 2s ./x > 1.out",shell=True)
 if rt:
     sys.stdout.write("ran too long\n");
 else:
