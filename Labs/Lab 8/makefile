@@ -1,9 +1,9 @@
 all: test
 
-test: EmptyDataCollectionException.o BinaryHeap.h Event.h TestDriver.o 
+test: EmptyDataCollectionException.o BinaryHeap.o Event.o TestDriver.o 
 	g++ -Wall -o lab TestDriver.o EmptyDataCollectionException.o
 
-TestDriver.o: TestDriver.cpp
+TestDriver.o: TestDriver.cpp BinaryHeap.h Event.h
 	g++ -Wall -c TestDriver.cpp
 		
 BinaryHeap.o: BinaryHeap.h BinaryHeap.cpp
