@@ -91,6 +91,14 @@ bool Event::operator<=(const Event& rhs) {
 	return false;
 } // end of operator<
 
+// Overloaded Operators
+// Description: Comparison > operator. 
+bool Event::operator>(const Event& rhs) {
+
+	// Compare both Event objects
+	return time > rhs.getTime();
+} // end of operator<
+
 
 // For Testing Purposes
 // Description: Prints the content of "rhs".

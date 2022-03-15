@@ -48,6 +48,10 @@ public:
 	// Description: Comparison <= operator. 
 	bool operator<=(const Event& rhs);
 
+	// Overloaded Operators
+	// Description: Comparison > operator. 
+	bool operator>(const Event& rhs);
+
 	// For Testing Purposes
 	// Description: Prints the content of "this". 
 	friend ostream & operator<<(ostream & os, const Event& rhs);
