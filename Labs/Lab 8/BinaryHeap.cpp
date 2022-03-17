@@ -43,7 +43,7 @@ unsigned int BinaryHeap::getElementCount() const {
 // Time Efficiency: O(log2 n)
 bool BinaryHeap::insert(Event& newElement) {
 
-    bool ableToInsert = false;
+    bool ableToInsert = true;
   
 	elements[elementCount] = newElement;
 	elementCount++;
@@ -80,11 +80,14 @@ void BinaryHeap::reHeapUp(unsigned int indexOfBottom) {
 // Exceptions: Throws EmptyDataCollectionException if this Binary Heap is empty.
 // Time Efficiency: O(log2 n)
 void BinaryHeap::remove() {
-      
-   // To do
+	if ( elementCount == 0 )
+    	throw(EmptyDataCollectionException("remove() called with an empty BinaryHeap.")); 
+   
+	elementCount--;
+	elements[0] = elements[elementCount];
+	reHeapDown(0);
 
 	return;
-	
 }  // end remove
 
 
